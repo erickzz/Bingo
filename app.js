@@ -32,9 +32,10 @@ const tamanhoBingo = (tamanhoVar) => {
 };
 
 const bingo = {
-  tamanho: tamanhoBingo,
+  tamanho: 0,
   renderizarBotoes() {
     console.log(this);
+    areaBotoesBingo.innerHTML = '';
     for (const value of this.tamanho) {
       areaBotoesBingo.append(value);
     }
