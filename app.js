@@ -74,7 +74,6 @@ const bingo = {
         this.verificarBingo();
       };
       cell.addEventListener('click', mudarCor);
-      cell.removeEventListener('mouseover', mudarCor);
     }
   },
   verificarBingo() {
