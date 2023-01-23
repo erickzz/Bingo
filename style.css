@@ -200,3 +200,29 @@ body {
   display: none;
 }
 
+#diagonalEsquerda{
+  width: 6px;
+  height: 1150px;
+  position: absolute;
+  background-color: red;
+  top:-95px;
+  left: 430px;
+  border-radius: 10px;
+  pointer-events: none;
+  transform: rotate(135deg);
+  display: none;
+}
+
+#diagonalDireita{
+  width: 6px;
+  height: 1150px;
+  position: absolute;
+  background-color: red;
+  top:-95px;
+  left: 433px;
+  border-radius: 10px;
+  pointer-events: none;
+  transform: rotate(45deg);
+  display: none;
+}
+

@@ -177,6 +177,34 @@ const bingo = {
       } else {
         document.getElementById('coluna4').classList.remove('visibilidade');
       }
+      if (
+        this.tamanho[0].className == 'botaoBingoAtivo' &&
+        this.tamanho[5].className == 'botaoBingoAtivo' &&
+        this.tamanho[10].className == 'botaoBingoAtivo' &&
+        this.tamanho[15].className == 'botaoBingoAtivo'
+      ) {
+        document
+          .getElementById('diagonalEsquerda')
+          .classList.add('visibilidade');
+      } else {
+        document
+          .getElementById('diagonalEsquerda')
+          .classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[3].className == 'botaoBingoAtivo' &&
+        this.tamanho[6].className == 'botaoBingoAtivo' &&
+        this.tamanho[9].className == 'botaoBingoAtivo' &&
+        this.tamanho[12].className == 'botaoBingoAtivo'
+      ) {
+        document
+          .getElementById('diagonalDireita')
+          .classList.add('visibilidade');
+      } else {
+        document
+          .getElementById('diagonalDireita')
+          .classList.remove('visibilidade');
+      }
     }
   },
 };
