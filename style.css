@@ -13,22 +13,6 @@ body{
     justify-content: space-between;
 }
 
-/* #bingo{
-    width:40%;
-    display: flex;
-    align-items: flex-start;
-}
-
-#bingo div{
-    text-align: center;
-    margin: auto;
-}
-
-#bingo button{
-    width:150px;
-    height: 150px;
-} */
-
 .bingo4x4{
     width:40%;
     display: flex;
@@ -45,8 +29,27 @@ body{
     height: 150px;
 }
 
+.bingo5x5{
+    width:45%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bingo5x5 div{
+    text-align: center;
+    margin: auto;
+}
+
+.bingo5x5 button{
+    width:150px;
+    height: 150px;
+}
+
+
+
 .botaoAtivo{
     background-color: rgba(255, 0, 0, 0.5);
+    color: #fff;
 }
 
 #menu{
@@ -76,4 +79,5 @@ body{
 #menu textarea{
     width: 700px;
     margin: 20px;
+    font-size: 20px;
 }
