@@ -27,6 +27,7 @@ body{
 .bingo4x4 button{
     width:200px;
     height: 200px;
+    border-radius: 20px;
 }
 
 .bingo5x5{
@@ -92,3 +93,55 @@ body{
     margin: 20px;
     font-size: 20px;
 }
+
+/*              MARCACOES LINHA             */
+
+.visibilidade{
+    display: block !important;
+}
+
+#linha1{
+    width: 900px;
+    height: 6px;
+    position: absolute;
+    background-color: red;
+    border-radius: 10px;
+    top: 185px;
+    pointer-events: none;
+    display: none;
+}
+
+#linha2{
+    width: 900px;
+    height: 6px;
+    position: absolute;
+    background-color: red;
+    border-radius: 10px;
+    top: 385px;
+    pointer-events: none;
+    display: none;
+}
+
+#linha3{
+    width: 900px;
+    height: 6px;
+    position: absolute;
+    background-color: red;
+    border-radius: 10px;
+    top: 585px;
+    pointer-events: none;
+    display: none;
+}
+
+#linha4{
+    width: 900px;
+    height: 6px;
+    position: absolute;
+    background-color: red;
+    border-radius: 10px;
+    top: 785px;
+    pointer-events: none;
+    display: none;
+}
+
+
