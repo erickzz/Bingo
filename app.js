@@ -58,7 +58,7 @@ const bingo = {
       console.log(value);
       areaBotoesBingo.append(value);
     } */
-    for (let i = 0; i < text.length; i++) {
+    for (let i = 0; i < text.length && i < 16; i++) {
       areaBotoesBingo.append(this.tamanho[i]);
       this.tamanho[i].innerHTML = '';
       this.tamanho[i].innerText = text[i];
