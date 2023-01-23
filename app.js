@@ -63,17 +63,14 @@ const bingo = {
         this.tamanho[i].innerText = '*vazio*';
       }
     }
-    this.selecionarCelulas();
+    this.adicionarEvents();
   },
   selecionarCelulas() {
     for (let i = 0; i < this.tamanho.length; i++) {
       let cell = this.tamanho[i];
-      const mudarCor = () => {
-        console.log(cell);
-        cell.classList.toggle('botaoBingoAtivo');
-        this.verificarBingo();
-      };
-      cell.addEventListener('click', mudarCor);
+      console.log(cell);
+      cell.classList.toggle('botaoBingoAtivo');
+      this.verificarBingo();
     }
   },
   verificarBingo() {
@@ -120,7 +117,15 @@ const bingo = {
       }
     }
   },
+  adicionarEvents() {
+    for (let i = 0; i < this.tamanho.length; i++) {
+      console.log(this.tamanho[i]);
+      this.tamanho[i].addEventListener('click', this.selecionarCelulas);
+    }
+  },
 };
+
+bingo.adicionarEvents();
 
 //bingo.renderizarBotoes();
 
