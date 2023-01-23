@@ -1,149 +1,150 @@
-body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#container{
-    background-color: rgb(41, 41, 41);
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    color: #fff;
-    justify-content: space-between;
-}
-
-.bingo4x4{
-    width:45%;
-    display: flex;
-    align-items: flex-start;
+#container {
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  justify-content: space-between;
 }
 
-.bingo4x4 div{
-    text-align: center;
-    margin: auto;
+.bingo4x4 {
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
 }
 
-.bingo4x4 button{
-    width:200px;
-    height: 200px;
-    border-radius: 20px;
-    position: absolute;
+.bingo4x4 div {
+  text-align: center;
+  margin: auto;
 }
 
-.bingo5x5{
-    width:45%;
-    display: flex;
-    align-items: flex-start;
+.bingo4x4 button {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  position: absolute;
 }
 
-.bingo5x5 div{
-    text-align: center;
-    margin: auto;
+.bingo5x5 {
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
 }
 
-.bingo5x5 button{
-    width:150px;
-    height: 150px;
-    border-radius: 20px;
+.bingo5x5 div {
+  text-align: center;
+  margin: auto;
 }
 
-#bingo button{
-    padding: 0;
-    position: relative;
-    margin: 0;
+.bingo5x5 button {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
 }
 
-
-
-.botaoBingoAtivo{
-    background-color: rgba(255, 0, 0, 0.5);
-    color: #fff;
+#bingo button {
+  padding: 0;
+  position: relative;
+  margin: 0;
 }
 
-#menu{
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+.botaoBingoAtivo {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
 }
 
-#menu button{
-    font-size: 20px;
-    padding: 5px 20px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
+#menu {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.botaoTamanhoAtivo{
-    background-color: #fff !important;
-    color: rgb(41, 41, 41) !important;
+#menu button {
+  font-size: 20px;
+  padding: 5px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
 }
 
-#menu button:hover{
-    background-color: #fff;
-    color: rgb(41, 41, 41);
+.botaoTamanhoAtivo {
+  background-color: #fff !important;
+  color: rgb(41, 41, 41) !important;
 }
 
-#menu textarea{
-    width: 700px;
-    margin: 20px;
-    font-size: 20px;
+#menu button:hover {
+  background-color: #fff;
+  color: rgb(41, 41, 41);
+}
+
+#menu textarea {
+  background-color: dimgray;
+  width: 700px;
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  color: #fff;
 }
 
 /*              MARCACOES LINHA             */
 
-.visibilidade{
-    display: block !important;
+.visibilidade {
+  display: block !important;
 }
 
-#linha1{
-    width: 900px;
-    height: 6px;
-    position: absolute;
-    background-color: red;
-    border-radius: 10px;
-    top: 185px;
-    pointer-events: none;
-    display: none;
+#linha1 {
+  width: 900px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 185px;
+  pointer-events: none;
+  display: none;
 }
 
-#linha2{
-    width: 900px;
-    height: 6px;
-    position: absolute;
-    background-color: red;
-    border-radius: 10px;
-    top: 385px;
-    pointer-events: none;
-    display: none;
+#linha2 {
+  width: 900px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 385px;
+  pointer-events: none;
+  display: none;
 }
 
-#linha3{
-    width: 900px;
-    height: 6px;
-    position: absolute;
-    background-color: red;
-    border-radius: 10px;
-    top: 585px;
-    pointer-events: none;
-    display: none;
+#linha3 {
+  width: 900px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 585px;
+  pointer-events: none;
+  display: none;
 }
 
-#linha4{
-    width: 900px;
-    height: 6px;
-    position: absolute;
-    background-color: red;
-    border-radius: 10px;
-    top: 785px;
-    pointer-events: none;
-    display: none;
+#linha4 {
+  width: 900px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 785px;
+  pointer-events: none;
+  display: none;
 }
-
-
