@@ -31,10 +31,8 @@ const tamanhoBingo = (tamanhoVar) => {
   return bingo;
 };
 
-let bingoTamanho;
-
 const bingo = {
-  tamanho: tamanhoBingo(tamanho),
+  tamanho: tamanhoBingo,
   renderizarBotoes() {
     console.log(this);
     for (const value of this.tamanho) {
@@ -46,11 +44,11 @@ const bingo = {
 //bingo.renderizarBotoes();
 
 botao4x4.addEventListener('click', () => {
-  bingoTamanho = tamanhoBingo(4);
+  bingo.tamanho = tamanhoBingo(4);
 });
 
 bingoTamanho = botao5x5.addEventListener('click', () => {
-  bingoTamanho = tamanhoBingo(5);
+  bingo.tamanho = tamanhoBingo(5);
 });
 
 botaoAplicar.addEventListener('click', bingo.renderizarBotoes.bind(bingo));
