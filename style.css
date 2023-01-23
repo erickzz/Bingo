@@ -49,6 +49,8 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 20px;
+  background-color: dimgray;
+  color: #fff;
 }
 
 #bingo button {
@@ -150,3 +152,51 @@ body {
   pointer-events: none;
   display: none;
 }
+
+#coluna1{
+  width: 6px;
+  height: 850px;
+  position: absolute;
+  background-color: red;
+  top:62px;
+  left: 130px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+
+#coluna2{
+  width: 6px;
+  height: 850px;
+  position: absolute;
+  background-color: red;
+  top:62px;
+  left: 330px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+#coluna3{
+  width: 6px;
+  height: 850px;
+  position: absolute;
+  background-color: red;
+  top:62px;
+  left: 530px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+
+#coluna4{
+  width: 6px;
+  height: 850px;
+  position: absolute;
+  background-color: red;
+  top:62px;
+  left: 730px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+

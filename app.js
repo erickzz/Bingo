@@ -9,6 +9,8 @@ let tamanho = 0;
 
 let checkEvents = 0;
 
+let textAreaSize = 0;
+
 const tamanhoBingo = (tamanhoVar) => {
   let bingo = [];
   if (tamanhoVar == 4) {
@@ -50,6 +52,7 @@ const bingo = {
   },
   renderizarBotoes() {
     text = this.arrayTexto();
+    textAreaSize = text.length;
     if (text == '' || tamanho == 0) {
       return (areaBotoesBingo.innerHTML = null);
     }
@@ -93,7 +96,7 @@ const bingo = {
     this.verificarBingo();
   },
   verificarBingo() {
-    if (tamanho == 4) {
+    if (tamanho == 4 && textAreaSize == 16) {
       if (
         this.tamanho[0].className == 'botaoBingoAtivo' &&
         this.tamanho[1].className == 'botaoBingoAtivo' &&
@@ -133,6 +136,46 @@ const bingo = {
         document.getElementById('linha4').classList.add('visibilidade');
       } else {
         document.getElementById('linha4').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[0].className == 'botaoBingoAtivo' &&
+        this.tamanho[4].className == 'botaoBingoAtivo' &&
+        this.tamanho[8].className == 'botaoBingoAtivo' &&
+        this.tamanho[12].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna1').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna1').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[1].className == 'botaoBingoAtivo' &&
+        this.tamanho[5].className == 'botaoBingoAtivo' &&
+        this.tamanho[9].className == 'botaoBingoAtivo' &&
+        this.tamanho[13].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna2').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna2').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[2].className == 'botaoBingoAtivo' &&
+        this.tamanho[6].className == 'botaoBingoAtivo' &&
+        this.tamanho[10].className == 'botaoBingoAtivo' &&
+        this.tamanho[14].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna3').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna3').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[3].className == 'botaoBingoAtivo' &&
+        this.tamanho[7].className == 'botaoBingoAtivo' &&
+        this.tamanho[11].className == 'botaoBingoAtivo' &&
+        this.tamanho[15].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna4').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna4').classList.remove('visibilidade');
       }
     }
   },
