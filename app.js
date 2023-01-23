@@ -58,17 +58,15 @@ const bingo = {
       console.log(value);
       areaBotoesBingo.append(value);
     } */
-    if (tamanho == 4) {
-      for (let i = 0; i < 16; i++) {
-        areaBotoesBingo.append(this.tamanho[i]);
-        this.tamanho[i].innerHTML = '';
-        this.tamanho[i].innerText = text[i];
-        if (
-          this.tamanho[i].innerText == 'undefined' ||
-          this.tamanho[i].innerText == ''
-        ) {
-          this.tamanho[i].innerText = '*vazio*';
-        }
+    for (let i = 0; i < text.length; i++) {
+      areaBotoesBingo.append(this.tamanho[i]);
+      this.tamanho[i].innerHTML = '';
+      this.tamanho[i].innerText = text[i];
+      if (
+        this.tamanho[i].innerText == 'undefined' ||
+        this.tamanho[i].innerText == ''
+      ) {
+        this.tamanho[i].innerText = '*vazio*';
       }
     }
     this.eventsBingo();
