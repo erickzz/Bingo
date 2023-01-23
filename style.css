@@ -14,7 +14,7 @@ body{
 }
 
 .bingo4x4{
-    width:40%;
+    width:45%;
     display: flex;
     align-items: flex-start;
 }
@@ -25,8 +25,8 @@ body{
 }
 
 .bingo4x4 button{
-    width:150px;
-    height: 150px;
+    width:200px;
+    height: 200px;
 }
 
 .bingo5x5{
@@ -47,7 +47,7 @@ body{
 
 
 
-.botaoAtivo{
+.botaoBingoAtivo{
     background-color: rgba(255, 0, 0, 0.5);
     color: #fff;
 }
@@ -69,6 +69,11 @@ body{
     background-color: transparent;
     color: #fff;
     cursor: pointer;
+}
+
+.botaoTamanhoAtivo{
+    background-color: #fff !important;
+    color: rgb(41, 41, 41) !important;
 }
 
 #menu button:hover{
