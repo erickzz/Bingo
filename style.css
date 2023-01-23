@@ -28,6 +28,7 @@ body{
     width:200px;
     height: 200px;
     border-radius: 20px;
+    position: absolute;
 }
 
 .bingo5x5{
@@ -44,6 +45,7 @@ body{
 .bingo5x5 button{
     width:150px;
     height: 150px;
+    border-radius: 20px;
 }
 
 #bingo button{
