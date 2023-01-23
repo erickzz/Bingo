@@ -84,6 +84,36 @@ const bingo = {
       } else {
         document.getElementById('linha1').classList.remove('visibilidade');
       }
+      if (
+        this.tamanho[4].className == 'botaoBingoAtivo' &&
+        this.tamanho[5].className == 'botaoBingoAtivo' &&
+        this.tamanho[6].className == 'botaoBingoAtivo' &&
+        this.tamanho[7].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha2').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha2').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[8].className == 'botaoBingoAtivo' &&
+        this.tamanho[9].className == 'botaoBingoAtivo' &&
+        this.tamanho[10].className == 'botaoBingoAtivo' &&
+        this.tamanho[11].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha3').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha3').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[12].className == 'botaoBingoAtivo' &&
+        this.tamanho[13].className == 'botaoBingoAtivo' &&
+        this.tamanho[14].className == 'botaoBingoAtivo' &&
+        this.tamanho[15].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha4').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha4').classList.remove('visibilidade');
+      }
     }
   },
 };
