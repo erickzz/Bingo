@@ -47,12 +47,24 @@ const bingo = {
       console.log(value);
       areaBotoesBingo.append(value);
     } */
+    console.log(text);
     for (let i = 0; i < this.tamanho.length; i++) {
       areaBotoesBingo.append(this.tamanho[i]);
-      console.log(text);
-      if (text[i] != undefined) {
-        this.tamanho[i].innerText = text[i];
+      this.tamanho[i].innerHTML = '';
+      this.tamanho[i].innerText = text[i];
+      if (this.tamanho[i].innerText == 'undefined') {
+        this.tamanho[i].innerText = '---';
       }
+    }
+    this.selecionarCelulas();
+  },
+  selecionarCelulas() {
+    for (let i = 0; i < this.tamanho.length; i++) {
+      let cell = this.tamanho[i];
+      cell.addEventListener('click', () => {
+        console.log(cell);
+        cell.classList.toggle('botaoBingoAtivo');
+      });
     }
   },
 };
