@@ -7,6 +7,8 @@ const textAreaEl = document.getElementById('textarea');
 
 let tamanho = 0;
 
+let checkEvents = 0;
+
 const tamanhoBingo = (tamanhoVar) => {
   let bingo = [];
   if (tamanhoVar == 4) {
@@ -35,6 +37,14 @@ const textArea = [];
 
 const bingo = {
   tamanho: 0,
+  eventsBingo() {
+    if (checkEvents == 0) {
+      for (let i = 0; i < this.tamanho.length; i++) {
+        this.tamanho[i].addEventListener('click', this.mudarCor.bind(this, i));
+      }
+      checkEvents = 1;
+    }
+  },
   arrayTexto() {
     return textAreaEl.value.trim().split('\n');
   },
@@ -43,15 +53,11 @@ const bingo = {
     if (text == '' || tamanho == 0) {
       return (areaBotoesBingo.innerHTML = null);
     }
-    console.log(text.length);
     areaBotoesBingo.innerHTML = null;
     /* for (const value of this.tamanho) {
       console.log(value);
       areaBotoesBingo.append(value);
     } */
-    console.log(text);
-    console.log(this.tamanho);
-    console.log('Text Length: ' + text.length);
     for (let i = 0; i < text.length; i++) {
       areaBotoesBingo.append(this.tamanho[i]);
       this.tamanho[i].innerHTML = '';
@@ -63,18 +69,12 @@ const bingo = {
         this.tamanho[i].innerText = '*vazio*';
       }
     }
-    this.selecionarCelulas();
+    this.eventsBingo();
   },
-  selecionarCelulas() {
-    for (let i = 0; i < this.tamanho.length; i++) {
-      let cell = this.tamanho[i];
-      const mudarCor = () => {
-        console.log(cell);
-        cell.classList.toggle('botaoBingoAtivo');
-        this.verificarBingo();
-      };
-      cell.addEventListener('click', mudarCor);
-    }
+  mudarCor(i) {
+    console.log(this.tamanho[i]);
+    this.tamanho[i].classList.toggle('botaoBingoAtivo');
+    this.verificarBingo();
   },
   verificarBingo() {
     if (tamanho == 4) {
