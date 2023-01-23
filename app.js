@@ -3,6 +3,7 @@ const botao5x5 = document.getElementById('5x5');
 const areaBotoesBingo = document.getElementById('areaBotoesBingo');
 const bingoEl = document.getElementById('bingo');
 const botaoAplicar = document.getElementById('aplicar');
+const textAreaEl = document.getElementById('textarea');
 
 let tamanho = 5;
 
@@ -31,13 +32,27 @@ const tamanhoBingo = (tamanhoVar) => {
   return bingo;
 };
 
+const textArea = [];
+
 const bingo = {
   tamanho: 0,
+  arrayTexto() {
+    return textAreaEl.value.trim().split('\n');
+  },
   renderizarBotoes() {
-    console.log(this);
-    areaBotoesBingo.innerHTML = '';
-    for (const value of this.tamanho) {
+    const text = this.arrayTexto();
+    console.log(text.length);
+    areaBotoesBingo.innerHTML = null;
+    /* for (const value of this.tamanho) {
+      console.log(value);
       areaBotoesBingo.append(value);
+    } */
+    for (let i = 0; i < this.tamanho.length; i++) {
+      areaBotoesBingo.append(this.tamanho[i]);
+      console.log(text);
+      if (text[i] != undefined) {
+        this.tamanho[i].innerText = text[i];
+      }
     }
   },
 };

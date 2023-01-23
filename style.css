@@ -45,6 +45,12 @@ body{
     height: 150px;
 }
 
+#bingo button{
+    padding: 0;
+    position: relative;
+    margin: 0;
+}
+
 
 
 .botaoBingoAtivo{
