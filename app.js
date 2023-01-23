@@ -116,12 +116,12 @@ const bingo = {
     this.eventsBingo();
   },
   mudarCor(i) {
-    console.log(this.tamanho[i]);
+    //console.log(this.tamanho[i]);
     this.tamanho[i].classList.toggle('botaoBingoAtivo');
     this.verificarBingo();
   },
   verificarBingo() {
-    if (tamanho == 4 && textAreaSize == 16) {
+    if (tamanho == 4 && textAreaSize >= 16) {
       if (
         this.tamanho[0].className == 'botaoBingoAtivo' &&
         this.tamanho[1].className == 'botaoBingoAtivo' &&
@@ -228,6 +228,148 @@ const bingo = {
       } else {
         document
           .getElementById('diagonalDireita')
+          .classList.remove('visibilidade');
+      }
+    }
+    if (tamanho == 5 && textAreaSize >= 25) {
+      if (
+        this.tamanho[0].className == 'botaoBingoAtivo' &&
+        this.tamanho[1].className == 'botaoBingoAtivo' &&
+        this.tamanho[2].className == 'botaoBingoAtivo' &&
+        this.tamanho[3].className == 'botaoBingoAtivo' &&
+        this.tamanho[4].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha1_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha1_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[5].className == 'botaoBingoAtivo' &&
+        this.tamanho[6].className == 'botaoBingoAtivo' &&
+        this.tamanho[7].className == 'botaoBingoAtivo' &&
+        this.tamanho[8].className == 'botaoBingoAtivo' &&
+        this.tamanho[9].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha2_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha2_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[10].className == 'botaoBingoAtivo' &&
+        this.tamanho[11].className == 'botaoBingoAtivo' &&
+        this.tamanho[12].className == 'botaoBingoAtivo' &&
+        this.tamanho[13].className == 'botaoBingoAtivo' &&
+        this.tamanho[14].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha3_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha3_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[15].className == 'botaoBingoAtivo' &&
+        this.tamanho[16].className == 'botaoBingoAtivo' &&
+        this.tamanho[17].className == 'botaoBingoAtivo' &&
+        this.tamanho[18].className == 'botaoBingoAtivo' &&
+        this.tamanho[19].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha4_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha4_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[20].className == 'botaoBingoAtivo' &&
+        this.tamanho[21].className == 'botaoBingoAtivo' &&
+        this.tamanho[22].className == 'botaoBingoAtivo' &&
+        this.tamanho[23].className == 'botaoBingoAtivo' &&
+        this.tamanho[24].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('linha5_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('linha5_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[0].className == 'botaoBingoAtivo' &&
+        this.tamanho[5].className == 'botaoBingoAtivo' &&
+        this.tamanho[10].className == 'botaoBingoAtivo' &&
+        this.tamanho[15].className == 'botaoBingoAtivo' &&
+        this.tamanho[20].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna1_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna1_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[1].className == 'botaoBingoAtivo' &&
+        this.tamanho[6].className == 'botaoBingoAtivo' &&
+        this.tamanho[11].className == 'botaoBingoAtivo' &&
+        this.tamanho[16].className == 'botaoBingoAtivo' &&
+        this.tamanho[21].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna2_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna2_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[2].className == 'botaoBingoAtivo' &&
+        this.tamanho[7].className == 'botaoBingoAtivo' &&
+        this.tamanho[12].className == 'botaoBingoAtivo' &&
+        this.tamanho[17].className == 'botaoBingoAtivo' &&
+        this.tamanho[22].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna3_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna3_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[3].className == 'botaoBingoAtivo' &&
+        this.tamanho[8].className == 'botaoBingoAtivo' &&
+        this.tamanho[13].className == 'botaoBingoAtivo' &&
+        this.tamanho[18].className == 'botaoBingoAtivo' &&
+        this.tamanho[23].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna4_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna4_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[4].className == 'botaoBingoAtivo' &&
+        this.tamanho[9].className == 'botaoBingoAtivo' &&
+        this.tamanho[14].className == 'botaoBingoAtivo' &&
+        this.tamanho[19].className == 'botaoBingoAtivo' &&
+        this.tamanho[24].className == 'botaoBingoAtivo'
+      ) {
+        document.getElementById('coluna5_5x5').classList.add('visibilidade');
+      } else {
+        document.getElementById('coluna5_5x5').classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[0].className == 'botaoBingoAtivo' &&
+        this.tamanho[6].className == 'botaoBingoAtivo' &&
+        this.tamanho[12].className == 'botaoBingoAtivo' &&
+        this.tamanho[18].className == 'botaoBingoAtivo' &&
+        this.tamanho[24].className == 'botaoBingoAtivo'
+      ) {
+        document
+          .getElementById('diagonalEsquerda_5x5')
+          .classList.add('visibilidade');
+      } else {
+        document
+          .getElementById('diagonalEsquerda_5x5')
+          .classList.remove('visibilidade');
+      }
+      if (
+        this.tamanho[4].className == 'botaoBingoAtivo' &&
+        this.tamanho[8].className == 'botaoBingoAtivo' &&
+        this.tamanho[12].className == 'botaoBingoAtivo' &&
+        this.tamanho[16].className == 'botaoBingoAtivo' &&
+        this.tamanho[20].className == 'botaoBingoAtivo'
+      ) {
+        document
+          .getElementById('diagonalDireita_5x5')
+          .classList.add('visibilidade');
+      } else {
+        document
+          .getElementById('diagonalDireita_5x5')
           .classList.remove('visibilidade');
       }
     }

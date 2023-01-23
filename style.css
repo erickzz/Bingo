@@ -226,3 +226,150 @@ body {
   display: none;
 }
 
+#coluna1_5x5{
+  width: 6px;
+  height: 820px;
+  position: absolute;
+  background-color: red;
+  top:80px;
+  left: 130px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+
+#coluna2_5x5{
+  width: 6px;
+  height: 820px;
+  position: absolute;
+  background-color: red;
+  top:80px;
+  left: 280px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+
+#coluna3_5x5{
+  width: 6px;
+  height: 820px;
+  position: absolute;
+  background-color: red;
+  top:80px;
+  left: 430px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+
+#coluna4_5x5{
+  width: 6px;
+  height: 820px;
+  position: absolute;
+  background-color: red;
+  top:80px;
+  left: 580px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+
+#coluna5_5x5{
+  width: 6px;
+  height: 820px;
+  position: absolute;
+  background-color: red;
+  top:80px;
+  left: 730px;
+  border-radius: 10px;
+  pointer-events: none;
+  display: none;
+}
+
+#linha1_5x5{
+  width: 800px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 182px;
+  left: 35px;
+  pointer-events: none;
+  display: none;
+}
+
+#linha2_5x5{
+  width: 800px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 332px;
+  left: 35px;
+  pointer-events: none;
+  display: none;
+}
+
+#linha3_5x5{
+  width: 800px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 482px;
+  left: 35px;
+  pointer-events: none;
+  display: none;
+}
+
+#linha4_5x5{
+  width: 800px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 632px;
+  left: 35px;
+  pointer-events: none;
+  display: none;
+}
+
+#linha5_5x5{
+  width: 800px;
+  height: 6px;
+  position: absolute;
+  background-color: red;
+  border-radius: 10px;
+  top: 782px;
+  left: 35px;
+  pointer-events: none;
+  display: none;
+}
+
+#diagonalEsquerda_5x5{
+  width: 6px;
+  height: 1100px;
+  position: absolute;
+  background-color: red;
+  top:-70px;
+  left: 430px;
+  border-radius: 10px;
+  pointer-events: none;
+  transform: rotate(135deg);
+  display: none;
+}
+
+#diagonalDireita_5x5{
+  width: 6px;
+  height: 1100px;
+  position: absolute;
+  background-color: red;
+  top:-70px;
+  left: 430px;
+  border-radius: 10px;
+  pointer-events: none;
+  transform: rotate(45deg);
+  display: none;
+}
+
+
