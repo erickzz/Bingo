@@ -9,7 +9,7 @@ let tamanho = 0;
 
 let checkEvents = 0;
 
-let textAreaSize = 0;
+let resetCelulas = 0;
 
 const tamanhoBingo = (tamanhoVar) => {
   let bingo = [];
@@ -22,6 +22,10 @@ const tamanhoBingo = (tamanhoVar) => {
     for (let i = 0; i < 16; i++) {
       bingo[i] = document.createElement('button');
     }
+    if (resetCelulas == 1) {
+      resetarCelulas();
+      bingo.eventsBingo();
+    }
   } else if (tamanhoVar == 5) {
     tamanho = 5;
     botao5x5.className = 'botaoTamanhoAtivo';
@@ -31,9 +35,30 @@ const tamanhoBingo = (tamanhoVar) => {
     for (let i = 0; i < 25; i++) {
       bingo[i] = document.createElement('button');
     }
+    if (resetCelulas == 1) {
+      resetarCelulas();
+      bingo.eventsBingo();
+    }
   }
+  resetCelulas = 1;
   return bingo;
 };
+
+function resetarCelulas() {
+  for (const value of bingo.tamanho) {
+    value.className = '';
+  }
+  document.getElementById('linha1').classList.remove('visibilidade');
+  document.getElementById('linha2').classList.remove('visibilidade');
+  document.getElementById('linha3').classList.remove('visibilidade');
+  document.getElementById('linha4').classList.remove('visibilidade');
+  document.getElementById('coluna1').classList.remove('visibilidade');
+  document.getElementById('coluna2').classList.remove('visibilidade');
+  document.getElementById('coluna3').classList.remove('visibilidade');
+  document.getElementById('coluna4').classList.remove('visibilidade');
+  document.getElementById('diagonalEsquerda').classList.remove('visibilidade');
+  document.getElementById('diagonalDireita').classList.remove('visibilidade');
+}
 
 const textArea = [];
 
